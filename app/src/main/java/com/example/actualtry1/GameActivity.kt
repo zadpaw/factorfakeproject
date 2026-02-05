@@ -293,7 +293,6 @@ class GameActivity : AppCompatActivity() {
                 timerCircle.progress = secondsLeft.toFloat()
                 timerCircle.text = secondsLeft.toString()
 
-                // Flash effect when 10s or below and number is odd
                 if (secondsLeft <= 10 && secondsLeft % 2 != 0) {
                     timerCircle.textColor = Color.RED
                 } else {
@@ -310,21 +309,17 @@ class GameActivity : AppCompatActivity() {
         }.start()
     }
     private fun restartGame() {
-        // Reset variables
         index = 0
         facts.clear()
         answers.clear()
 
-        // Hide button
         playAgainButton.visibility = View.GONE
 
-        // Hide cards and timer until countdown finishes
         cardStackView.visibility = View.GONE
         timerCircle.visibility = View.GONE
         cardStackView.alpha = 0f
         timerCircle.alpha = 0f
 
-        // Pick new facts and start background animation
         pickFacts()
     }
 
@@ -338,3 +333,4 @@ class GameActivity : AppCompatActivity() {
         finish() // close GameActivity
     }
 }
+
