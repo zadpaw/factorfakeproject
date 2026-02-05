@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/game"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity"
+    android:background="@drawable/wb1">
+
+    <ImageView
+        android:id="@+id/light"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/light_glow"
+        android:alpha="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/countdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/marker"
+        android:gravity="center"
+        android:text="3"
+        android:textAppearance="@color/black"
+        android:textSize="250sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="193dp"
+        android:visibility="gone"/>
+
+
+
+    <View
+        android:id="@+id/lefthint"
+        android:layout_width="73dp"
+        android:layout_height="471dp"
+        android:background="@drawable/lefthint"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.146" />
+
+    <View
+        android:id="@+id/righthint"
+        android:layout_width="75dp"
+        android:layout_height="464dp"
+        android:background="@drawable/righthint"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.173" />
+
+    <com.yuyakaido.android.cardstackview.CardStackView
+        android:id="@+id/cardStackView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.45"
+        app:layout_constraintWidth_percent="0.7"
+        app:layout_constraintVertical_bias="0.25"/>
+
+    <com.github.lzyzsd.circleprogress.DonutProgress
+        android:id="@+id/timerCircle"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:donut_finished_color="#000000"
+        app:donut_unfinished_color="#444444"
+        app:donut_text_color="#FFFFFF"
+        android:visibility="gone"
+        app:donut_text_size="50sp" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
