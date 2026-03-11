@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gameOverRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wb1"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/gameOverText"
+        android:text="GAME OVER"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="36sp"
+        android:textColor="#000000"
+        android:fontFamily="@font/marker"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:id="@+id/scoreMain"
+        android:text="0 / 10"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="48sp"
+        android:textColor="#000000"
+        android:fontFamily="@font/marker"
+        android:layout_marginBottom="20dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/resultContainer"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/again"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="PLAY AGAIN"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:background="@drawable/startbutton"
+        android:fontFamily="@font/marker"
+        android:layout_marginBottom="40dp"/>
+
+</LinearLayout>
