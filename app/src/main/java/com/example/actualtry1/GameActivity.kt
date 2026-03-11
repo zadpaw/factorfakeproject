@@ -349,10 +349,10 @@ class GameActivity : AppCompatActivity() {
     }
 
     private fun finishGame() {
-        if (gameended) return   // <- prevents double call
+        if (gameended) return
         gameended = true
 
-        // Stop the timer if it's still running
+        // stop if running
         timer?.cancel()
         val results = ArrayList<Result>()
 
